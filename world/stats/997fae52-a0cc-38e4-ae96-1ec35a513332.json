@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "minecraft:zombie": 1,
+      "minecraft:iron_golem": 1,
+      "minecraft:cat": 1
+    },
+    "minecraft:crafted": {
+      "minecraft:stick": 8,
+      "minecraft:wooden_axe": 1,
+      "minecraft:wooden_pickaxe": 1,
+      "minecraft:oak_boat": 1,
+      "minecraft:stone_axe": 1,
+      "minecraft:oak_planks": 20,
+      "minecraft:stone_pickaxe": 1,
+      "minecraft:crafting_table": 1
+    },
+    "minecraft:mined": {
+      "minecraft:short_grass": 3,
+      "minecraft:spruce_log": 7,
+      "minecraft:crafting_table": 4,
+      "minecraft:rose_bush": 6,
+      "minecraft:leaf_litter": 2,
+      "minecraft:oak_log": 5,
+      "minecraft:cobblestone": 4,
+      "minecraft:sugar_cane": 3,
+      "minecraft:stone": 31
+    },
+    "minecraft:used": {
+      "minecraft:stone_axe": 16,
+      "minecraft:wooden_axe": 23,
+      "minecraft:crafting_table": 4,
+      "minecraft:wooden_pickaxe": 42,
+      "minecraft:bread": 3,
+      "minecraft:oak_boat": 1,
+      "minecraft:cobblestone": 4
+    },
+    "minecraft:custom": {
+      "minecraft:talked_to_villager": 9,
+      "minecraft:time_since_rest": 11484,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 3,
+      "minecraft:damage_taken": 50,
+      "minecraft:boat_one_cm": 7216,
+      "minecraft:time_since_death": 11484,
+      "minecraft:interact_with_furnace": 1,
+      "minecraft:interact_with_smithing_table": 1,
+      "minecraft:total_world_time": 11484,
+      "minecraft:swim_one_cm": 6814,
+      "minecraft:crouch_one_cm": 769,
+      "minecraft:interact_with_crafting_table": 3,
+      "minecraft:walk_one_cm": 22888,
+      "minecraft:walk_under_water_one_cm": 298,
+      "minecraft:play_time": 11484,
+      "minecraft:damage_dealt": 1900,
+      "minecraft:jump": 411,
+      "minecraft:sprint_one_cm": 30330,
+      "minecraft:open_chest": 2,
+      "minecraft:fall_one_cm": 4525,
+      "minecraft:fly_one_cm": 116860,
+      "minecraft:walk_on_water_one_cm": 567,
+      "minecraft:sneak_time": 743,
+      "minecraft:interact_with_blast_furnace": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:spruce_log": 7,
+      "minecraft:rose_bush": 5,
+      "minecraft:oak_log": 5,
+      "minecraft:cobblestone": 35,
+      "minecraft:poppy": 1,
+      "minecraft:oak_boat": 1,
+      "minecraft:sugar_cane": 13,
+      "minecraft:crafting_table": 4,
+      "minecraft:iron_ingot": 5
+    }
+  },
+  "DataVersion": 4671
+}
