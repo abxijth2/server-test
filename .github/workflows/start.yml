@@ -12,14 +12,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # ☕ Install Java 21 (REQUIRED)
+      # ☕ Install Java 21
       - name: Set up Java 21
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
 
-      # 🔍 Debug: confirm files
+      # 🔍 Debug: confirm files exist
       - name: Check files
         run: ls -la
 
@@ -29,15 +29,22 @@ jobs:
           curl -L https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-amd64 -o playit
           chmod +x playit
 
-      # 🚀 Start playit (WITH LOGS)
-      - name: Start playit
+      # 🔥 DEBUG: Run playit in foreground (shows output)
+      - name: Run playit (DEBUG MODE)
+        run: |
+          echo "===== STARTING PLAYIT ====="
+          timeout 20s ./playit
+          echo "===== PLAYIT DEBUG END ====="
+
+      # 🚀 Start playit in background (after debug)
+      - name: Start playit (background)
         run: |
           ./playit > playit.log 2>&1 &
-          sleep 8
-          echo "====== PLAYIT LOG ======"
+          sleep 5
+          echo "===== PLAYIT LOG ====="
           cat playit.log
 
-      # 🎮 Start Minecraft server (5 min limit)
+      # 🎮 Start Minecraft server (5 min)
       - name: Start Minecraft Server
         run: |
           timeout 5m java -Xmx2G -Xms1G -jar paper-1.21.11-130.jar nogui
