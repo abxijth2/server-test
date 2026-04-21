@@ -8,16 +8,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Install Java
-        run: sudo apt install openjdk-21-jdk -y
+        run: |
+          sudo apt update
+          sudo apt install openjdk-21-jdk -y
+
+      - name: Check files
+        run: ls -la
+
+      - name: Install playit
+        run: |
+          curl -L https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-amd64 -o playit
+          chmod +x playit
 
       - name: Start playit
         run: |
-          curl -SsL https://playit.gg/install.sh | bash
-          ./playit &
+          nohup ./playit &
 
-      - name: Start Server
+      - name: Start Server (timed)
         run: |
-          java -Xmx2G -Xms1G -jar paper-1.21.11-130.jar nogui
+          timeout 5m java -Xmx2G -Xms1G -jar paper-1.21.11-130.jar nogui
